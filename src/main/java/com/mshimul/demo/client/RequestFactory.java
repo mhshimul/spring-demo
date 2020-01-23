@@ -14,8 +14,7 @@ import java.net.URI;
 public class RequestFactory {
     private RestTemplate restTemplate = new RestTemplate();
 
-    @PostConstruct
-    public void init() {
+    public RequestFactory() {
         this.restTemplate.setRequestFactory(new HttpComponentsClientHttpRequestWithBodyFactory());
     }
 
