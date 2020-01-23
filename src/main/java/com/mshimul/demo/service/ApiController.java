@@ -14,7 +14,7 @@ public class ApiController {
 
     @RequestMapping(
             path = "/name",
-            method = RequestMethod.POST,
+            method = RequestMethod.GET,
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
