@@ -24,7 +24,7 @@ public class ApiClient {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         ResponseEntity<ApiResponse> responseEntity = restTemplate.exchange("http://localhost:8080/api/name",
-                HttpMethod.POST, new HttpEntity<>(new ApiRequest("Monzurul", "Haque", "Shimul"), headers), ApiResponse.class);
+                HttpMethod.GET, new HttpEntity<>(new ApiRequest("Monzurul", "Haque", "Shimul"), headers), ApiResponse.class);
         if (responseEntity.getStatusCode().is2xxSuccessful()) {
             ApiResponse response = responseEntity.getBody();
             assert response != null;
